@@ -33,7 +33,7 @@ public class ExceptionHandlers {
     @ExceptionHandler
     @ResponseStatus(code = HttpStatus.INTERNAL_SERVER_ERROR)
     List<String> handle(Exception e) {
-        log.error("System Exception", e.getMessage());
+        log.error("System Exception", e);
         return List.of(e.getMessage());
     }
 

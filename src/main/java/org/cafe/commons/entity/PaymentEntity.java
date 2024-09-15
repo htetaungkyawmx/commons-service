@@ -1,9 +1,7 @@
 package org.cafe.commons.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.cafe.commons.shared.Status;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -14,7 +12,9 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class PaymentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
